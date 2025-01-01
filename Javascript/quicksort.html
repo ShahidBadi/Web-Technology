@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter size of array:"));
+        var a = [n];
+        for (let i = 0; i < n; i++) {
+            a[i] = parseInt(prompt());
+        }
+        flag=true;
+        var lb=0;
+        var ub=n-1;
+        if(lb<ub){
+            var i=lb;
+            var j=ub+1;
+            var key=a[lb];
+            while(flag=true){
+                i=i+1;
+                while(a[i]<key){
+                    i=i+1; 
+                }
+                j=j-1;
+                while(a[j]>key){
+                    j=j-1;
+                }
+                if(i<j){
+                    let temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+                else{
+                    flag=false;
+                }
+                let temp=a[lb];
+                a[lb]=a[j];
+                a[j]=temp;
+            }
+        }
+        for (let i = 0; i < a.length; i++) {
+            document.write(a[i], '<br>')
+        }
+    </script>
+</body>
+</html>

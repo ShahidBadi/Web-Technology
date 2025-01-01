@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let faculties = [
+                {
+                    fac_id: 1,
+                    fac_name: "Dr. Gopi Sanghani",
+                    fac_desi: "Dean - School of Computer Science",
+                    fac_edu: "Ph.D. , M.E. (CE)",
+                    fac_exp: "24+ Year",
+                    fac_year: "JUL-2012",
+                    fac_img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg"
+                },
+                {
+                    fac_id: 2,
+                    fac_name: "Dr. Nilesh Gambhava",
+                    fac_desi: "Professor",
+                    fac_edu: "Ph.D. , M.E. (CE)",
+                    fac_exp: "21 + Year",
+                    fac_year: "JUL-2009",
+                    fac_img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/3---28-04-2023-02-02-42.jpg"
+                },
+                {
+                    fac_id: 3,
+                    fac_name: "Dr. Pradyumansinh Jadeja",
+                    fac_desi: "Professor",
+                    fac_edu: "Ph.D. , M.E. (CE)",
+                    fac_exp: "19+ Year",
+                    fac_year: "JUL-2009",
+                    fac_img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg"
+                },
+                {
+                    fac_id: 4,
+                    fac_name: "Prof. Maulik Trivedi",
+                    fac_desi: "Assistant Professor",
+                    fac_edu: "Ph.D.(Pursuing), M.Tech.(CSE)",
+                    fac_exp: "16+ Year",
+                    fac_year: "JUN-2009",
+                    fac_img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/8---28-04-2023-02-06-25.jpg"
+                },
+                {
+                    fac_name: "Prof. Firoz Sherasiya",
+                    fac_desi: "Assistant Professor",
+                    fac_edu: "Ph.D.(Pursuing), M.E. (CE)",
+                    fac_exp: "19+ Year",
+                    fac_year: "DEC-2022",
+                    fac_img: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/12---28-04-2023-02-06-51.jpg"
+                }
+                
+            ]
+            for (fac of faculties) {
+                document.write('<div class="card">');
+                document.write('<img src="' + fac.fac_img + '" alt="Faculty Image">');
+                document.write('<div class="card-body">');
+                document.write('<p>' + fac.fac_name + '</p>');
+                document.write('<p>' + fac.fac_desi + '</p>');
+                document.write('<p>' + fac.fac_edu + '</p>');
+                document.write('<p>' + fac.fac_exp + '</p>');
+                document.write('<p>' + fac.fac_year + '</p>');
+                document.write('</div>');
+                document.write('</div>');
+                document.write('<br>');
+            }
+    </script>
+</body>
+</html>

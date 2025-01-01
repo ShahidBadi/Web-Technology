@@ -1,0 +1,11 @@
+{
+  "name": "wt-2",
+  "version": "1.0.0",
+  "description": "this is node app",
+  "main": "index.js",
+  "scripts": {
+    "dev":"node index.js"
+  },
+  "author": "badi",
+  "license": "ISC"
+}
