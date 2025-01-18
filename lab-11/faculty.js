@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
-const Student = require('./model/Student');
+const students = require('./model/facultyschema');
 const express = require('express');
 const bodyParser = require('body-parser');
-var jwt = require('jsonwebtoken');
-const multer  = require('multer');
-const path = require('path');
+// var jwt = require('jsonwebtoken');
+// const multer  = require('multer');
+// const path = require('path');
 
 
-const atlasUrl = "mongodb+srv://classdemo:classdemo@cluster0.qcr6o.mongodb.net/classdemodb";
+const atlasUrl = "mongodb+srv://shahidbadi:shahid%40123@cluster0.cc8w9.mongodb.net/wt-2";
 
 // const storage = multer.diskStorage({
 //     destination: function (req, file, cb) {
@@ -39,14 +39,14 @@ mongoose.connect(atlasUrl).then(()=>{
     // })
 
     //getAll
-    app.get("/student",async (req,res)=>{
-        const data = await Student.find();
+    app.get("/faculty",async (req,res)=>{
+        const data = await students.find();
         res.send(data);
     });
 
     //getByID
-    app.get("/student/:id",async (req,res)=>{
-        const data = await Student.findOne({_id:req.params.id});
+    app.get("/faculty/:id",async (req,res)=>{
+        const data = await students.findOne({_id:req.params.id});
         res.send(data);
     });
 
@@ -62,14 +62,14 @@ mongoose.connect(atlasUrl).then(()=>{
     // })
 
     //delete
-    app.delete("/student/:id", async (req,res)=>{
-        const data = await Student.deleteOne({_id:req.params.id});
+    app.delete("/faculty/:id", async (req,res)=>{
+        const data = await students.deleteOne({_id:req.params.id});
         res.send(data)
     });
 
     //insert (Create)
-    app.post("/student", async (req,res)=>{
-        const obj = new Student({
+    app.post("/faculty", async (req,res)=>{
+        const obj = new students({
             StudentName:req.body.StudentName,
             StudentMobile:req.body.StudentMobile,
             StudentEmail: req.body.StudentEmail,
@@ -81,8 +81,8 @@ mongoose.connect(atlasUrl).then(()=>{
     });
 
     //update
-    app.patch("/student/:id", async (req,res)=>{
-        let stu = await Student.findOne({_id:req.params.id});
+    app.patch("/faculty/:id", async (req,res)=>{
+        let stu = await students.findOne({_id:req.params.id});
         stu.StudentName = req.body.StudentName;
         stu.StudentEmail = req.body.StudentEmail;
         stu.StudentMobile = req.body.StudentMobile;
