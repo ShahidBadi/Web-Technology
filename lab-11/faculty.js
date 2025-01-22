@@ -39,16 +39,16 @@ mongoose.connect(atlasUrl).then(()=>{
     // })
 
     //getAll
-    app.get("/faculty",async (req,res)=>{
-        const data = await students.find();
-        res.send(data);
-    });
+    // app.get("/faculty",async (req,res)=>{
+    //     const data = await students.find();
+    //     res.send(data);
+    // });
 
-    //getByID
-    app.get("/faculty/:id",async (req,res)=>{
-        const data = await students.findOne({_id:req.params.id});
-        res.send(data);
-    });
+    // //getByID
+    // app.get("/faculty/:id",async (req,res)=>{
+    //     const data = await students.findOne({_id:req.params.id});
+    //     res.send(data);
+    // });
 
     // app.get("/login",async (req,res)=>{
     //     const data = await Student.findOne({StudentEmail:req.body.StudentEmail, StudentPassword:req.body.StudentPassword});
@@ -62,34 +62,34 @@ mongoose.connect(atlasUrl).then(()=>{
     // })
 
     //delete
-    app.delete("/faculty/:id", async (req,res)=>{
-        const data = await students.deleteOne({_id:req.params.id});
-        res.send(data)
-    });
+    // app.delete("/faculty/:id", async (req,res)=>{
+    //     const data = await students.deleteOne({_id:req.params.id});
+    //     res.send(data)
+    // });
 
-    //insert (Create)
-    app.post("/faculty", async (req,res)=>{
-        const obj = new students({
-            StudentName:req.body.StudentName,
-            StudentMobile:req.body.StudentMobile,
-            StudentEmail: req.body.StudentEmail,
-            StudentPassword: req.body.StudentPassword,
-        });
-        const data = await obj.save();
-        res.send(data);
+    // //insert (Create)
+    // app.post("/faculty", async (req,res)=>{
+    //     const obj = new students({
+    //         StudentName:req.body.StudentName,
+    //         StudentMobile:req.body.StudentMobile,
+    //         StudentEmail: req.body.StudentEmail,
+    //         StudentPassword: req.body.StudentPassword,
+    //     });
+    //     const data = await obj.save();
+    //     res.send(data);
 
-    });
+    // });
 
     //update
-    app.patch("/faculty/:id", async (req,res)=>{
-        let stu = await students.findOne({_id:req.params.id});
-        stu.StudentName = req.body.StudentName;
-        stu.StudentEmail = req.body.StudentEmail;
-        stu.StudentMobile = req.body.StudentMobile;
-        stu.StudentPassword = req.body.StudentPassword;
-        const data = await stu.save();
-        res.send(data);
-    });
+    // app.patch("/faculty/:id", async (req,res)=>{
+    //     let stu = await students.findOne({_id:req.params.id});
+    //     stu.StudentName = req.body.StudentName;
+    //     stu.StudentEmail = req.body.StudentEmail;
+    //     stu.StudentMobile = req.body.StudentMobile;
+    //     stu.StudentPassword = req.body.StudentPassword;
+    //     const data = await stu.save();
+    //     res.send(data);
+    // });
 
     // app.post("/upload",upload.single('studentImage'),(req,res)=>{
     //     res.send("Hello world");
