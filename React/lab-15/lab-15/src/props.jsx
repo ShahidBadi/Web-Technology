@@ -20,4 +20,14 @@ function Eventhandler() {
         </div>
     )
 }
-export { Parent, Eventhandler };
+// function Ternary(isDisplay){
+//     return <Childternary isDisplay={true}></Childternary>
+// }
+function Childternary({isDisplay}){
+   return( <>
+    {isDisplay?<h1>true</h1>:<h1>false</h1>}
+    </>
+   )
+}
+
+export { Parent, Eventhandler,Childternary };

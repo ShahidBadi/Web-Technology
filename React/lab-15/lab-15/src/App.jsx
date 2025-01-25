@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 // import { Eventhandler } from './props'
-import {Parent,Eventhandler} from './props'
+import {Parent,Eventhandler,Childternary} from './props'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +12,7 @@ function App() {
     <>
       <Parent/>
       <Eventhandler/>
+      <Childternary isDisplay={false}/>
     </>
   )
 }
