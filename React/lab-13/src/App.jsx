@@ -14,15 +14,16 @@ function App() {
       <div className='nav'>
         <Navbarcomponent />
       </div>
-    <div className='sideandmain'>
-    <div className='side'>
-        <Sidebar />
+      <div className='sideandmain'>
+        <div className='side'>
+          <Sidebar />
+        </div>
+        <div className='main'>
+          <Maincomponent />
+        </div>
+
       </div>
-      <div className='main'>
-        <Maincomponent />
-      </div>
-    </div>
-      
+
 
       <div className='footer'>
         <Footercomponent />
