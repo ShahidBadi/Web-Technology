@@ -4,15 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // import { Eventhandler } from './props'
 import {Parent,Eventhandler,Childternary} from './props'
+import Mapdemo from './mapdemo'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Parent/>
+      {/* <Parent/>
       <Eventhandler/>
-      <Childternary isDisplay={false}/>
+      <Childternary isDisplay={false}/> */}
+      <div>
+      <Mapdemo/>
+      </div>
+      
     </>
   )
 }
