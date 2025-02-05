@@ -3,7 +3,6 @@ const product = require('./product')
 const cart = require('./cart')
 
 const Schema=mongoose.Schema({
-    OrderId:Number,
     ShippingAddress:[{
         Street:String,
         City:String,

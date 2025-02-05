@@ -1,7 +1,6 @@
 const mongoose=require('mongoose')
 
 const Schema=mongoose.Schema({
-    UserId:Number,
     UserFirstName:String,
     UserLastName:String,
     UserPassword:String,
@@ -13,6 +12,8 @@ const Schema=mongoose.Schema({
         State:String,
         PostalCode:Number,
         Country:String
-    }]
-})
+    }],
+    // favourites:[id],
+    CartId:{type: mongoose.Schema.Types.ObjectId,ref:'cart'},
+});
 module.exports=mongoose.model('user',Schema)
