@@ -1,0 +1,73 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-pic,
+.product-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #555;
+}
+
+.card:hover .profile-pic,
+.card:hover .product-pic {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+table {
+    width: 85%;
+    border-collapse: collapse;
+    text-align: center;
+    background: #ffffff;
+    color: #585858;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #756d6d;
+}
+
+th {
+    background: #444;
+}
+
+tr:nth-child(even) {
+    background: #ffffff;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}

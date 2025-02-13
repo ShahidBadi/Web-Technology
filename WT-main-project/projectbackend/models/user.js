@@ -2,28 +2,20 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema({
     // _id: ObjectId(),
-    firstName: "string",
-    lastName: "string",
-    email: "string",
-    password: "string",
-    phone: "Number",
-    usercartID: "string",
+    firstName: String,
+    lastName: String,
+    email: String,
+    password: String,
+    phone: Number,
+    usercartID: Number,
     addresses: [{
-            street: "string",
-            city: "string",
-            state: "string",
-            zip: "Number",
-            country: "string",
-            // isPrimary: true
+            street: String,
+            city: String,
+            state: String,
+            zip: Number,
+            country: String,
+            isPrimary: Boolean
         },
-        {
-            street: "string",
-            city: "string",
-            state: "string",
-            zip: "Number",
-            country: "string",
-            // isPrimary: false
-        }
     ],
 })
 module.exports = mongoose.model('user', Schema)

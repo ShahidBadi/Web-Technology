@@ -14,16 +14,8 @@ const Schema = mongoose.Schema({
             state: "string",
             zip: "Number",
             country: "string",
-            isPrimary: true
+            isPrimary: boolean
         },
-        {
-            street: "string",
-            city: "string",
-            state: "string",
-            zip: "Number",
-            country: "string",
-            isPrimary: false
-        }
     ],
 })
 module.exports = mongoose.model('user', Schema)

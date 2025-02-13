@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema({
-    Categoryname: "String",
-    CategoryId: "Number",
+    Categoryname: String,
+    CategoryId: Number,
     Img:String
 })
 
