@@ -3,7 +3,6 @@ const product = require('./product')
 const cart = require('./cart')
 
 const Schema = mongoose.Schema({
-    _id: ObjectId(),
     userId: ObjectId("user_id"),
     orderNumber: "Number",
     orderStatus: "string",

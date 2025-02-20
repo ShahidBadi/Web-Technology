@@ -15,6 +15,5 @@ const Schema = mongoose.Schema({
         average: Number,
         totalReviews: Number
     },
-
 })
 module.exports = mongoose.model("Product", Schema)

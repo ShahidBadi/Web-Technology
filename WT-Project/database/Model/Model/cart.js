@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema({
-    _id: ObjectId(),
     userId: ObjectId("user_id"),
     items: [{
             productId: ObjectId("product_id"),

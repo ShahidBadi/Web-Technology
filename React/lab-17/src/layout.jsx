@@ -26,6 +26,15 @@ function Layout() {
                             <li class="nav-item">
                                 <Link class="nav-link" to="/detail">Detail</Link>
                             </li>
+                            <li class="nav-item">
+                                <Link class="nav-link" to="/usestate">UseState</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link" to="/useeffect">UseEffect</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link" to="/calculator">Calculator</Link>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
